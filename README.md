@@ -14,7 +14,7 @@ A simple and responsive **Todo App** built using **HTML, CSS, and JavaScript**. 
 
 * **HTML5** – Structure of the application
 * **CSS3** – Styling and layout
-* **JavaScript (ES6)** – Application logic and interactivity
+* **JavaScript** – Application logic and interactivity
 
 ## 📂 Project Structure
 
@@ -41,7 +41,7 @@ Example:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/todo-app.git
+git clone https://github.com/Kirti391/todo-app.git
 ```
 
 2. Navigate to the project folder:
@@ -66,11 +66,7 @@ No additional dependencies or installations are required.
 
 Contributions, issues, and feature requests are welcome. Feel free to fork the project and submit a pull request.
 
-## 📄 License
 
-This project is licensed under the MIT License.
-
-## 👨‍💻 Author
 
 Developed with ❤️ using HTML, CSS, and JavaScript.
 
