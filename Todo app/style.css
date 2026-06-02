@@ -59,25 +59,80 @@ ul {
     margin-right: 100px;
 }
 
+
 li {
     background-color: #f4f4f4;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 6px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    transition: 0.3s;
+    gap: 5px;
+      transition: 0.3s;
 }
+/*li {*/
+/*    background-color: #f4f4f4;*/
+/*    margin-bottom: 10px;*/
+/*    padding: 10px;*/
+/*    border-radius: 6px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+  
+/*}*/
 
 li:hover {
     background-color: #e8e8e8;
+}
+li span {
+    flex: 1;
+    text-align: left;
 }
 
 .delete {
     background-color: #ff4d4d;
     padding: 6px 10px;
     font-size: 12px;
+}
+
+.delete:hover {
+    background-color: #cc0000;
+}
+.done,
+.edit,
+.delete {
+    padding: 6px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+/* Done Button */
+.done {
+    background-color: #28a745;
+}
+
+.done:hover {
+    background-color: #218838;
+}
+
+/* Edit Button */
+.edit {
+    background-color: #ffc107;
+    color: black;
+}
+
+.edit:hover {
+    background-color: #e0a800;
+}
+
+/* Delete Button */
+.delete {
+    background-color: #ff4d4d;
 }
 
 .delete:hover {
