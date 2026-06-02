@@ -1,43 +1,66 @@
+let btn = document.querySelector("button");
+let ul = document.querySelector("ul");
+let inp = document.querySelector("input");
 
+btn.addEventListener("click", function () {
 
-let  btn=document.querySelector("button");
-let ul=document.querySelector("ul");
-let inp=document.querySelector("input");
+    if (inp.value.trim() === "") {
+        alert("Please enter a task");
+        return;
+    }
 
-btn.addEventListener("click", function(){
-    // console.log("clicked");
-    // console.log(inp.value);
-    let item=document.createElement("li");
-    
-    item.innerText=inp.value;
-    let delBtn=document.createElement("button");
-    delBtn.innerText="Delete";
-    ul.appendChild(item);
+    let item = document.createElement("li");
+
+    let taskText = document.createElement("span");
+    taskText.innerText = inp.value;
+
+    let editBtn = document.createElement("button");
+    editBtn.innerText = "Edit";
+    editBtn.classList.add("edit");
+
+    let delBtn = document.createElement("button");
+    delBtn.innerText = "Delete";
     delBtn.classList.add("delete");
+
+    item.appendChild(taskText);
+    item.appendChild(editBtn);
     item.appendChild(delBtn);
-    inp.value=" ";
-     let delBtns= document.querySelectorAll(".delete");
-    //  for(delBtn of delBtns){
-    //     delBtn.addEventListener("click", function(){
-    //         // console.log("element delted");
-    //         let par=delBtn.parentElement;
-    //         // console.log(par);
-    //         par.remove();
-    //     })
-    //  }
 
-    ul.addEventListener("click",function(event){
-        // console.log("button clicked");
-        // console.log(event.target);
-        // console.dir(event.target);
-        // console.log(event.target.nodeName);
-        if(event.target.nodeName=="BUTTON"){
-            let listItem=event.target.parentElement;
-            console.log(" task delted");
-            // console.log(listItem);
-            listItem.remove();
-            
+    ul.appendChild(item);
+
+    inp.value = "";
+});
+
+
+ul.addEventListener("click", function (event) {
+
+    // DELETE TASK
+    if (event.target.classList.contains("delete")) {
+
+        let listItem = event.target.parentElement;
+
+        console.log("Task deleted");
+
+        listItem.remove();
+    }
+
+    // EDIT TASK
+    if (event.target.classList.contains("edit")) {
+
+        let listItem = event.target.parentElement;
+
+        let taskSpan = listItem.querySelector("span");
+
+        let updatedTask = prompt(
+            "Edit your task:",
+            taskSpan.innerText
+        );
+
+        if (
+            updatedTask !== null &&
+            updatedTask.trim() !== ""
+        ) {
+            taskSpan.innerText = updatedTask;
         }
-    })
-
-})
+    }
+});
