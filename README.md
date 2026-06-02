@@ -5,8 +5,8 @@ A simple and responsive **Todo App** built using **HTML, CSS, and JavaScript**. 
 ## 🚀 Features
 
 * Add new tasks
-* Mark tasks as completed
 * Delete tasks
+* Edit tasks
 * Responsive and user-friendly interface
 * Real-time task management without page reloads
 
